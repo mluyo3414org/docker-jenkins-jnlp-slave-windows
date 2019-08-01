@@ -45,7 +45,7 @@ RUN Invoke-WebRequest "https://github.com/git-for-windows/git/releases/download/
 RUN Expand-Archive $env:GIT_FILENAME .\git;
 
 # Build off nanoserver container
-FROM microsoft/nanoserver:sac2016
+FROM mcr.microsoft.com/windows/nanoserver:1809
 
 LABEL maintainer="Jonathan Kuleff <jonathankuleff+docker@gmail.com>" `
       org.label-schema.schema-version="1.0" `
